@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :users
+  devise_for :models
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'homes#index'
-
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
