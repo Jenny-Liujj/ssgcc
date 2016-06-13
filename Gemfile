@@ -37,7 +37,15 @@ gem 'less-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem "capistrano", "~> 3.4"
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-rvm'
+  gem 'capistrano-chruby'
+  gem 'capistrano-bundler'
+  gem 'capistrano-scm-copy'
+  gem 'capistrano-passenger'
+  gem 'capistrano-sidekiq'
 end
 
 group :development do

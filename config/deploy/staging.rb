@@ -49,9 +49,9 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server 'example.com',
-#   user: 'user_name',
-#   roles: %w{web app},
+ server '192.168.1.125',
+ user: 'jingjing',
+        roles: %w{web app},
 #   ssh_options: {
 #     user: 'user_name', # overrides user setting above
 #     keys: %w(/home/user_name/.ssh/id_rsa),
@@ -59,3 +59,5 @@
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+#set :server, ask('Server IP', ENV['SSGENE_STAGING_SERVER_IP'])
+#server "www@#{fetch(:server)}", roles: %w[web app db], primary: true #, sidekiq: true, whenever: true
